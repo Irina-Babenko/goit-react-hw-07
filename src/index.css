@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+ul,
+p {
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  height: 45px;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  transition: background-color 350ms linear, color 250ms linear,
+    border 350ms linear;
+}
+
+button:hover,
+button:focus {
+  background-color: #fff;
+  color: #333;
+  border: none;
+}
