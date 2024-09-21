@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 import css from './ContactForm.module.css';
 
 const FeedbackSchema = Yup.object().shape({
@@ -12,7 +12,7 @@ const FeedbackSchema = Yup.object().shape({
   number: Yup.string()
     .matches(
       /^(\+?\d{1,4}|\(\d{1,4}\))?\s?\d{3}[\s.-]?\d{3}[\s.-]?\d{4}$/,
-      'Invalid phone number format. Supported formats are: +1234567890, (123) 456-7890, 123-456-7890.',
+      'Invalid phone number format.',
     )
     .required('Required'),
 });

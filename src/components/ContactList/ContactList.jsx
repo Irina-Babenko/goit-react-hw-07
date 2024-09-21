@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectFilteredContacts } from '../../redux/selectors';
+import Contact from '../Contact/Contact';
+
 const ContactList = ({ onDelete }) => {
   const filteredContacts = useSelector(selectFilteredContacts);
 
@@ -10,8 +12,7 @@ const ContactList = ({ onDelete }) => {
       ) : (
         filteredContacts.map(contact => (
           <li key={contact.id}>
-            {contact.name}: {contact.phone}
-            <button onClick={() => onDelete(contact.id)}>Delete</button>{' '}
+            <Contact data={contact} onDelete={onDelete} />
           </li>
         ))
       )}

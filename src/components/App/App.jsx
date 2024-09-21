@@ -5,6 +5,7 @@ import SearchBox from '../SearchBox/SearchBox';
 import ContactList from '../ContactList/ContactList';
 import { selectFilteredContacts } from '../../redux/selectors';
 import { fetchContacts, deleteContact } from '../../redux/contactsOps';
+import Loader from '../Loader/Loader';
 import css from './App.module.css';
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
       <ContactForm />
       <SearchBox />
 
-      {loading && <p>Loading contacts...</p>}
+      {loading && <Loader />}
       {error && <p>Error: {error}</p>}
 
       {!loading && !error && (
