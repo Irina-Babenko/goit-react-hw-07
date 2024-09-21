@@ -1,0 +1,21 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.boxInput {
+  width: 370px;
+  height: 26px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 250ms linear;
+  outline: none;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.boxInput:hover,
+.boxInput:focus {
+  border-color: #333;
+}
